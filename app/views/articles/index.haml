@@ -1,0 +1,23 @@
+%h1 Articles
+
+%p{:style=>'color:green;'}= notice
+
+=# TODO: fix problème de debug
+
+%table
+  %thead
+    %tr
+      %th Titre
+      %th Contenu
+      %th{:colspan=>"3"} Liens
+
+  %tbody
+    = @articles.each do |article|
+      %tr
+        %td= article.title
+        %td= article.text
+        %td= link_to 'Voir', article 
+        %td= link_to 'Modifier', edit_article_path(article) 
+        %td= link_to 'Supprimer', article, method: :delete, data: { confirm: 'Êtes-vous sûr ?' }
+
+= link_to 'Nouvel article', new_article_path

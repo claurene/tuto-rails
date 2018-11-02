@@ -1,0 +1,17 @@
+%p{:style=>'color:green;'}= notice
+
+%p
+  %strong Titre:
+  = @article.title
+
+%p
+  %strong Contenu:
+  = @article.text
+
+%h2 Commentaires
+= render @article.commentaires
+
+%h2 Ajouter un commentaire :
+= render 'commentaires/form'
+
+= link_to 'Retour', articles_path

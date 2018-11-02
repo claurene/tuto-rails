@@ -1,0 +1,8 @@
+%p
+    %strong Auteur:
+    = commentaire.auteur
+%p
+    %strong Commentaire:
+    = commentaire.body
+%p
+    = link_to 'Supprimer', [commentaire.article, commentaire], method: :delete, data: { confirm: 'Êtes-vous sûr ?' }
