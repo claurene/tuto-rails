@@ -1,0 +1,19 @@
+<p style='color:green;'><%= notice %></p>
+
+<p>
+  <strong>Titre:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Contenu:</strong>
+  <%= @article.text %>
+</p>
+
+<h2>Commentaires</h2>
+<%= render @article.commentaires %>
+
+<h2>Ajouter un commentaire :</h2>
+<%= render 'commentaires/form' %>
+
+<%= link_to 'Retour', articles_path %>

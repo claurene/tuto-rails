@@ -1,0 +1,17 @@
+<%= form_for(@article) do |f| %>
+    <p style='color:red;'><%= @notice %></p>
+
+    <p>
+        <%= f.label :title, 'Titre' %><br>
+        <%= f.text_field :title %>
+    </p>
+
+    <p>
+        <%= f.label :text, 'Contenu' %><br>
+        <%= f.text_area :text %>
+    </p>
+
+    <p>
+        <%= f.submit 'Enregistrer' %>
+    </p>
+<% end %>
